@@ -1,0 +1,49 @@
+
+1. **Compile design and testbench**
+
+   * `ncvlog design.v -mess`
+   * `ncvlog testbench.v -mess`
+
+2. **Elaborate the testbench**
+
+   * `ncelab testbench_module_name -mess`
+
+3. **Run simulation**
+
+   * `ncsim testbench_module_name`
+
+4. **Launch SimVision GUI**
+
+   * `nclaunch`
+
+5. **In SimVision:**
+
+   * File → Select design directory (`out`)
+   * Create and save `edl.lib`
+   * In **Worklib**, right-click and delete old snapshots if needed
+   * Use **Tools icon 2** to elaborate
+   * Use **Tools icon 3** for testbench elaboration
+   * Use **Tools icon 4** to launch simulation
+   * View waveforms and results in SimVision
+
+---
+
+Open terminal and type: genus -gui
+
+Inside Genus:
+
+    read_lib /home/installs/cad/slow.lib
+
+    read_hdl [.v]
+
+    elaborate
+
+    read_sdc [.sdc]
+
+    synthesize -to_mapped
+
+    report timing
+
+    report power
+
+    report area
