@@ -8,5 +8,5 @@ set_output_delay -min 0.0 -clock clk_10MHz [get_ports sum_reg]
 set_clock_uncertainty -setup 0.2 [get_clocks clk_10MHz]
 set_clock_uncertainty -hold 0.1 [get_clocks clk_10MHz]
 #skew
-#set_clock_latency 3 [get_clocks clk_10MHz]
+set_clock_latency 3 [get_clocks clk_10MHz]
 set_clock_latency 5 [get_clocks clk_10MHz]
