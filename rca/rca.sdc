@@ -1,5 +1,5 @@
 
-create_clock -period 10 [get_ports 
+create_clock -period 10 [get_ports clk]
 
 set_input_delay 2.5 -clock clk [all_inputs]
 
